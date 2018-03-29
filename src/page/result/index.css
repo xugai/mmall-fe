@@ -1,0 +1,27 @@
+/*
+* @Author: Xugai
+* @Date:   2018-03-29 00:35:24
+* @Last Modified by:   Xugai
+* @Last Modified time: 2018-03-29 01:11:37
+*/
+.page-wrap{
+	padding: 30px 0;
+	margin-top: 30px;
+	text-align: center;
+	background: #fff;
+}
+.result{
+	display: none;
+}
+.result .result-title{
+	color:#555;
+
+}
+.result .result-content{
+	margin-top: 20px;
+}
+.result .result-content .link{
+	margin: 0 5px;
+	padding: 5px 10px;
+	border:1px solid #ccc;
+}

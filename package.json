@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "css-loader": "^0.28.11",
+    "font-awesome": "^4.7.0",
+    "hogan.js": "^3.0.2",
     "html-loader": "^0.5.5",
     "style-loader": "^0.20.3"
   }
