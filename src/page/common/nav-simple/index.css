@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-27 11:27:37
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-27 12:00:14
+* @Last Modified time: 2018-03-31 11:49:13
 */
 .nav-simple{
 	height: 60px;
@@ -14,4 +14,9 @@
 	font-size: 32px;
 	font-weight: bold;
 	color: #c60023;
+	text-decoration: none;
+}
+.nav-simple .welcome{
+	font-size: 24px;
+	margin-left: 5px;
 }

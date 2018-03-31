@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-27 12:09:51
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-28 11:14:05
+* @Last Modified time: 2018-03-30 17:57:15
 */
 require('./index.css');
 
@@ -25,7 +25,7 @@ var _nav = {
 			_mm.doLogin();
 		});
 		$('.js-register').click(function(){
-			window.location.href = './register.html';
+			window.location.href = './user-register.html';
 		});
 		$('.js-logout').click(function(){
 			_user.logout(function(res){
@@ -38,10 +38,11 @@ var _nav = {
 	//获取用户信息
 	loadUserInfo: function(){
 		_user.checkLogin(function(res){
-			$('.user not-login').hide().siblings('.user login').show().
+			$('.user.not-login').hide().siblings('.user.login').show().
 			find('.username').text(res.username);
 		}, function(errMsg){
-			_mm.errorTip(errMsg);
+			$('.user.not-login').show().siblings('.user.login').hide().
+			find('.username').text('');
 		});
 	},
 	//获取当前购物车商品数量
@@ -54,4 +55,4 @@ var _nav = {
 	}
 };
 
-module.exports = _nav;
+module.exports = _nav.init();

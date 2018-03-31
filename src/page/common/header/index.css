@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-28 12:00:03
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-28 19:51:24
+* @Last Modified time: 2018-03-31 11:48:58
 */
 .header .logo{
 	position: absolute;
@@ -12,7 +12,7 @@
 	font-size: 38px;
 	color: #c60023;
 	font-weight: bold;
-
+	text-decoration: none;
 }
 .header .search-con{
 	padding: 40px 0 30px 270px;
@@ -30,4 +30,15 @@
 	height:44px;
 	position: absolute;
 	width:90px;
+}
+
+/* 面包屑导航 */
+.crumb{
+	margin-bottom: 15px;
+	height: 50px;
+	line-height: 50px;
+	background: #eee;
+	color: #888;
+	font-size: 14px;
+	border-top: 2px solid #c60023
 }

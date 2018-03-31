@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-23 20:25:24
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-29 00:35:36
+* @Last Modified time: 2018-03-31 18:44:10
 */
 
 var webpack 		  = require('webpack');
@@ -29,8 +29,13 @@ var config = {
 	entry: {
 		'common': ['./src/page/common/index.js'],
 		'index': ['./src/page/index/index.js'],
-		'login': ['./src/page/login/index.js'],
-		'result': ['./src/page/result/index.js']
+		'user-login': ['./src/page/user-login/index.js'],
+		'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
+		'user-center': ['./src/page/user-center/index.js'],
+		'user-center-update': ['./src/page/user-center-update/index.js'],
+		'user-pass-update': ['./src/page/user-pass-update/index.js'],
+		'result': ['./src/page/result/index.js'],
+		'user-register': ['./src/page/user-register/index.js']
 	},
 	output: {
 		path: './dist',
@@ -69,7 +74,12 @@ var config = {
 		new Ex("css/[name].css"),
 		//html模板的处理
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-		new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
 		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
 	]
 };

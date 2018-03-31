@@ -1,0 +1,27 @@
+<div class="panel-title">个人中心</div>
+	<div class="panel-body">
+			<div class="user-info">
+				<div class="form-line">
+					<span class="label">用户名：</span>
+					<span class="text">{{username}}</span>
+				</div>
+				<div class="form-line">
+						<span class="label">手 机：</span>
+						<input class="input" id="phone" autocomplete="off" placeholder="{{phone}}" />
+				</div>
+				<div class="form-line">
+					<span class="label">邮 箱：</span>
+					<input class="input" id="email" autocomplete="off" placeholder="{{email}}" />
+				</div>
+				<div class="form-line">
+					<span class="label">问 题：</span>
+					<input class="input" id="question" autocomplete="off" placeholder="{{question}}" />
+				</div>
+				<div class="form-line">
+					<span class="label">答 案：</span>
+					<input class="input" id="answer" autocomplete="off" placeholder="{{answer}}" />
+				</div>
+				<span class="btn btn-submit">提交</span>
+			</div> 
+	</div>	
+	

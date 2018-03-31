@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-28 21:03:01
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-28 22:07:31
+* @Last Modified time: 2018-03-31 12:15:39
 */
 /* 侧边导航主体 */
 .nav-side{
@@ -23,4 +23,5 @@
 /* 右侧内容区 */
 .content.with-nav{
 	float:left;
+	width:950px;
 }

@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-25 21:35:07
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-26 17:58:12
+* @Last Modified time: 2018-03-30 16:14:57
 */
 
 
@@ -51,7 +51,7 @@ var _mm = {
 	getUrlParam: function(name){
 		var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
 		var result = window.location.search.substr(1).match(reg);
-		return result ? result[2] : null;
+		return result ? decodeURIComponent(result[2]) : null;
 	},
 	//渲染html模板
 	renderHtml: function(htmlTemplate,data){
@@ -89,7 +89,7 @@ var _mm = {
 			把当前窗口中的URL改为访问登录页面时的URL，并把当前的页面地址作为参数放进URL里，好让用户登录完后
 			能重新跳转到先前浏览的页面，提高用户体验度。
 		*/
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
 	//返回主页
 	goHome: function(){

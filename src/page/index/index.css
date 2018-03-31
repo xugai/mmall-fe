@@ -2,5 +2,31 @@
 * @Author: Xugai
 * @Date:   2018-03-24 10:15:10
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-27 09:39:19
+* @Last Modified time: 2018-03-31 23:26:15
 */
+.keywords-list{
+	float: left;
+	width: 240px;
+	height: 350px;
+	padding: 10px 0;
+	margin-right: 10px;
+	background: #666;
+	color: #fff;
+}
+.keywords-list .keywords-item{
+	padding-left: 10px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+}
+.keywords-list .keywords-item:hover{
+	background: #999;
+}
+.keywords-list .keywords-item .link{
+	margin-right: 6px;
+	color: #fff;
+}
+.keywords-list .keywords-item .link:hover{
+	color: #c60023;
+}
+
