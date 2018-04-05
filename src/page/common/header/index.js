@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-28 11:59:55
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-28 19:37:26
+* @Last Modified time: 2018-04-01 21:34:24
 */
 require('./index.css');
 var _mm = require('util/mm.js');
@@ -11,6 +11,7 @@ var _mm = require('util/mm.js');
 var header = {
 	init: function(){
 		this.bindEvent();
+		this.onLoad();
 	},
 	onLoad: function(){
 		var keyword = _mm.getUrlParam('keyword');
