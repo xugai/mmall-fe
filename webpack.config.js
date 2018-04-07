@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-23 20:25:24
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-03 16:03:24
+* @Last Modified time: 2018-04-06 09:38:53
 */
 
 var webpack 		  = require('webpack');
@@ -31,6 +31,7 @@ var config = {
 		'index': ['./src/page/index/index.js'],
 		'list': ['./src/page/list/index.js'],
 		'detail': ['./src/page/detail/index.js'],
+		'cart': ['./src/page/cart/index.js'],
 		'user-login': ['./src/page/user-login/index.js'],
 		'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
 		'user-center': ['./src/page/user-center/index.js'],
@@ -78,6 +79,7 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
 		new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
 		new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情')),
+		new HtmlWebpackPlugin(getHtmlConfig('cart', '我的购物车')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),

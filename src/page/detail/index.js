@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-03 15:58:15
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-05 11:06:42
+* @Last Modified time: 2018-04-05 12:06:13
 */
 require('../module.js');
 require('./index.css');
@@ -19,8 +19,6 @@ var templateIndex = require('./index.string');
 var _page = {
 	data: {
 		productId: _mm.getUrlParam('productId') || '',
-		detailInfo: '',
-		imageHost: ''
 	},
 	init: function(){
 		this.onLoad();
