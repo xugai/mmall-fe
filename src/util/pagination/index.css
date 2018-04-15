@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-02 17:57:24
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-03 00:11:27
+* @Last Modified time: 2018-04-14 14:06:31
 */
 .pg-content{
 	text-align: center;
@@ -22,6 +22,10 @@
 	-ms-user-select: none;
 	user-select: none;
 
+}
+.pg-content .pg-item:hover{
+	background: #c60023;
+	color: #fff;
 }
 .pg-content .pg-item.disabled{
 	color: #ccc;

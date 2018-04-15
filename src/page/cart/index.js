@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-06 09:39:12
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-07 14:07:35
+* @Last Modified time: 2018-04-09 21:03:51
 */
 require('../module.js');
 require('./index.css');
@@ -121,6 +121,9 @@ var _page = {
 					arrProductIds.push($($selectedItems[i]).parents('.cart-table').data('product-id'));
 				}
 				if(arrProductIds.length){
+					/*
+						调用数组的join方法，是返回一个有","将数组内的元素拼接起来的字符串
+					*/
 					_this.deleteCartProduct(arrProductIds.join(','));
 				}
 				else{
@@ -132,7 +135,7 @@ var _page = {
 		$(document).on('click', '.btn-submit', function(){
 			//若当前购物车的总价大于0，则进行提交
 			if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-				window.location.href = './confirm.html';
+				window.location.href = './order-confirm.html';
 			}else{
 				_mm.errorTip('请选择商品后再进行提交');
 			}

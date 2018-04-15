@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-31 11:33:01
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-31 12:59:40
+* @Last Modified time: 2018-04-14 11:32:43
 */
 require('../module.js');
 require('./index.css');
@@ -32,11 +32,13 @@ var page = {
 		var userHtml = '';
 		_user.getUserInfo(function(res){
 			userHtml = _mm.renderHtml(templateIndex,res);
-			$('.panel').html(userHtml);
+			$('.panel-body').html(userHtml);
 		}, function(errMsg){
 			_mm.errorTip(errMsg);
 		});
 	}
 };
 
-module.exports = page.init();
+$(function(){
+	page.init();
+});
