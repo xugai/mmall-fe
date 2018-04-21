@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-03 15:58:15
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-05 12:06:13
+* @Last Modified time: 2018-04-21 14:56:25
 */
 require('../module.js');
 require('./index.css');
@@ -63,7 +63,8 @@ var _page = {
 				productId: _this.data.productId,
 				count: $('.p-count').val()
 			}, function(res){
-				window.location.href = './result.html?type=cart-add';
+				var currentURL = encodeURIComponent(window.location.href);
+				window.location.href = './result.html?type=cart-add&currentURL=' + currentURL;
 			}, function(errMsg){
 				_mm.errorTip(errMsg);
 			});

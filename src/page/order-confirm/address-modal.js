@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-11 09:37:56
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-12 16:20:19
+* @Last Modified time: 2018-04-15 15:16:09
 */
 
 var _mm = require('util/mm.js');
@@ -14,7 +14,9 @@ var templateAddressModal = require('./address-modal.string');
 var _addressModal = {
 	show: function(option){
 		//option的绑定
+		this.flag = false;
 		this.option = option;
+		this.option.data = option.data || {};
 		this.$modalWrap = $('.modal-wrap');
 		//渲染页面
 		this.loadModal();
@@ -89,9 +91,13 @@ var _addressModal = {
 	loadCities: function(selectedProvince){
 		var cities = _cities.getCities(selectedProvince),
 			$citySelect = this.$modalWrap.find('#receiver-city');
-		$citySelect.html(this.getSelectOption(cities));
-		if(this.option.isUpdate && this.option.data.receiverCity){
+		// $citySelect.html(this.getSelectOption(cities));
+		if(this.option.isUpdate && this.option.data.receiverCity && !this.flag){
+			$citySelect.html(this.getSelectOption(cities));
 			$citySelect.val(this.option.data.receiverCity);
+			this.flag = true;
+		}else{
+			$citySelect.html(this.getSelectOption(cities));
 		}
 	},
 	//获取select框的选项，输入: array,输出: html
