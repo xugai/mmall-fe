@@ -2,7 +2,10 @@
 * @Author: Xugai
 * @Date:   2018-03-23 20:25:24
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-21 11:04:39
+* @Last Modified time: 2018-04-21 23:15:19
+*
+* __dirname:全局变量,存储的是文件所在的文件目录, __filename:全局变量,存储的是文件名
+*
 */
 
 var webpack 		  = require('webpack');
@@ -17,6 +20,7 @@ var getHtmlConfig = function(name, title){
 	return{
 		template: './src/view/' + name + '.html',
 		filename: 'view/' + name + '.html',
+		favicon: './favicon.ico',
 		title: title,
 		inject: true,
 		hash: true,
@@ -42,11 +46,12 @@ var config = {
 		'user-center-update': ['./src/page/user-center-update/index.js'],
 		'user-pass-update': ['./src/page/user-pass-update/index.js'],
 		'result': ['./src/page/result/index.js'],
-		'user-register': ['./src/page/user-register/index.js']
+		'user-register': ['./src/page/user-register/index.js'],
+		'about': ['./src/page/about/index.js']
 	},
 	output: {
-		path: './dist',
-		publicPath: '/dist',
+		path: __dirname + '/dist',
+		publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
 		filename: 'js/[name].js',
 	},
 	externals: {
@@ -94,7 +99,8 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
-		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
+		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+		new HtmlWebpackPlugin(getHtmlConfig('about', '关于我们'))
 	]
 };
 

@@ -51,7 +51,7 @@
 </table>
 {{/list}}
 {{^list}}
-	<p class="err-tip">
+	<p class="error-tip">
 		您暂时还没有订单，<a class="link" href="./index.html">去商城看看吧！</a>
 	</p>
 {{/list}}

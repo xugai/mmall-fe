@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-21 11:06:09
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-21 15:11:25
+* @Last Modified time: 2018-04-21 15:54:55
 */
 require('../module.js');
 require('./index.css');
@@ -56,8 +56,13 @@ var page = {
 	},
 	listenOrderStatus: function(){
 		var _this = this;
-		this.paymentTimer = window.setInterval(function(){
-			_payment.getPaymentStatus(_this.data.orderNumber, function(res){
+		/*
+			功能：按照指定的周期（以毫秒计）来调用函数或计算表达式
+			注：setInterval()方法会不停地调用函数，直到用clearInterval()终止定时或窗口被关闭。
+				5e3表示，5乘以10的3次方；这是科学计数法
+		*/ 
+		window.setInterval(function(){
+			this.paymentTimer = _payment.getPaymentStatus(_this.data.orderNumber, function(res){
 				if(res == true){
 					window.location.href = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
 				}
