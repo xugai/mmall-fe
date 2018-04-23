@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-21 11:06:09
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-21 15:54:55
+* @Last Modified time: 2018-04-23 08:40:44
 */
 require('../module.js');
 require('./index.css');
@@ -63,7 +63,7 @@ var page = {
 		*/ 
 		window.setInterval(function(){
 			this.paymentTimer = _payment.getPaymentStatus(_this.data.orderNumber, function(res){
-				if(res == true){
+				if(res === true){
 					window.location.href = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
 				}
 			})
