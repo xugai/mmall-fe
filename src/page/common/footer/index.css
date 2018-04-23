@@ -1,0 +1,22 @@
+/*
+* @Author: Xugai
+* @Date:   2018-03-28 11:03:23
+* @Last Modified by:   Xugai
+* @Last Modified time: 2018-03-28 11:16:28
+*/
+.footer{
+	padding-bottom: 10px;
+}
+.footer .links{
+	text-align: center;
+	color: #666;
+	line-height: 40px;
+}
+.footer .links .link{
+	padding: 0 20px;
+}
+.footer .copyright{
+	text-align: center;
+	color:#666;
+	line-height: 30px;
+}

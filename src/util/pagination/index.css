@@ -1,0 +1,46 @@
+/*
+* @Author: Xugai
+* @Date:   2018-04-02 17:57:24
+* @Last Modified by:   Xugai
+* @Last Modified time: 2018-04-14 14:06:31
+*/
+.pg-content{
+	text-align: center;
+	color: #333;
+}
+.pg-content .pg-item{
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px;
+	margin: 0 2px;
+	border: 1px solid #ccc;
+	background: #eee;
+	cursor: pointer;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+.pg-content .pg-item:hover{
+	background: #c60023;
+	color: #fff;
+}
+.pg-content .pg-item.disabled{
+	color: #ccc;
+	background: none;
+	cursor: auto;
+}
+.pg-content .pg-item.active{
+	background: #c60023;
+	color: #fff;
+	/*background: none;*/
+	border: 1px solid #c60023;
+	cursor: auto;
+}
+.pg-content .pg-total{
+	margin-left: 10px;
+	background: none;
+	cursor: auto;
+}
