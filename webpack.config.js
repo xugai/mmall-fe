@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-23 20:25:24
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-21 23:15:19
+* @Last Modified time: 2018-04-25 01:14:54
 *
 * __dirname:全局变量,存储的是文件所在的文件目录, __filename:全局变量,存储的是文件名
 *
@@ -51,7 +51,7 @@ var config = {
 	},
 	output: {
 		path: __dirname + '/dist',
-		publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+		publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.immall.tk/mmall-fe/dist/',
 		filename: 'js/[name].js',
 	},
 	externals: {
