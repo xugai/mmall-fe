@@ -4,8 +4,8 @@
   "description": "mmall商城的前端项目",
   "main": "index.js",
   "scripts": {
-    "dev_win": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
-    "dist_win": "WEBPACK_ENV=online webpack -p"
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dist": "WEBPACK_ENV=online webpack -p"
   },
   "repository": {
     "type": "git",
