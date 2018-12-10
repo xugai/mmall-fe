@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-25 21:35:07
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-30 16:14:57
+* @Last Modified time: 2018-05-14 18:08:47
 */
 
 
@@ -50,6 +50,8 @@ var _mm = {
 	//获取url参数
 	getUrlParam: function(name){
 		var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+		//window.location.search得到的是url中从'?'开始到后面的字符串
+		//substr()返回一个从指定位置开始的指定长度的子字符串，这里参数为1，说明是把开头的'?'去掉
 		var result = window.location.search.substr(1).match(reg);
 		return result ? decodeURIComponent(result[2]) : null;
 	},
