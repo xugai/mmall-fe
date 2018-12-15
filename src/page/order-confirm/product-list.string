@@ -26,6 +26,6 @@
 </table>
 <div class="submit-con">
 	<span>订单总价：</span>
-	<span class="submit-total">￥{{productTotalPrice}}</span>
+	<span class="submit-total">￥{{payment}}</span>
 	<span class="btn order-submit">提交订单</span>
 </div>
