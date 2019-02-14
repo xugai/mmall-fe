@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-03-30 20:16:47
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-03-30 22:06:04
+* @Last Modified time: 2019-01-10 12:01:05
 */
 require('../module.js');
 
@@ -112,7 +112,7 @@ var page = {
 	},
 	//第三步，提交新密码
 	loadStepPassword: function(){
-		//清楚错误提示
+		//清除错误提示
 		formError.hide();
 		//做容器的切换
 		$('.step-question').hide().siblings('.step-password').show();
