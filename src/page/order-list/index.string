@@ -13,7 +13,7 @@
 		<td colspan="5" class="order-info">
 			<span class="order-text">
 				<span>订单号：</span>
-				<a class="link" href=".order-detail.html?orderNumber={{orderNo}}">
+				<a class="link" href="order-detail.html?orderNumber={{orderNo}}">
 					<span class="order-num">{{orderNo}}</span>
 				</a>
 			</span>
