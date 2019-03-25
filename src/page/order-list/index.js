@@ -2,7 +2,7 @@
 * @Author: Xugai
 * @Date:   2018-04-14 10:59:59
 * @Last Modified by:   Xugai
-* @Last Modified time: 2018-04-14 15:14:50
+* @Last Modified time: 2019-03-25 11:06:22
 */
 require('../module.js');
 require('./index.css');
@@ -21,7 +21,7 @@ var page = {
 	data: {
 		listParam: {
 			pageNum: 1,
-			pageSize: 1
+			pageSize: 5
 		}
 	},
 	init: function(){
